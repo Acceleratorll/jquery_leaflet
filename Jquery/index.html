@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Learn Jquery</title>
+</head>
+
+<body>
+    <h1>Ini halaman untuk belajar Jquery</h1>
+    <button id="klik">Klik Me</button>
+    <button class="no-klik">Dont even try to klik Me</button>
+
+    <form action="" method="get">
+        <label for="">First</label>
+        <input type="text" id="first"><br>
+        <label for="">Second</label>
+        <input type="text" id="second">
+    </form>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("#klik").click(function () {
+            alert("berhasil di klik")
+        })
+        $(".no-klik").click(function () {
+            alert("!!!!!!!!!!!!!!")
+        })
+        $("#first").change(function () {
+            console.log($("#first").val())
+            $("#second").val($("#first").val())
+        })
+    })
+</script>
+
+</html>
